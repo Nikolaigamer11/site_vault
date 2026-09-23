@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "SiteVault",
+  "version": "1.0",
+  "description": "Save, sort and access your favorite sites instantly.",
+
+  "permissions": ["storage", "tabs", "scripting", "activeTab", "favicon"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "commands": {
+    "toggle-save-site": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Save or remove the current site"
+    },
+    "cycle-prev": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Alt+Q"
+      },
+      "description": "Cycle to previous saved site"
+    },
+    "cycle-next": {
+      "suggested_key": {
+        "default": "Alt+E",
+        "mac": "Alt+E"
+      },
+      "description": "Cycle to next saved site"
+    },
+    "open-cycled-site": {
+      "suggested_key": {
+        "default": "Alt+W",
+        "mac": "Alt+W"
+      },
+      "description": "Open the currently highlighted site"
+    }
+  }
+}
